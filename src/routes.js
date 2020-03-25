@@ -2,11 +2,11 @@ const express = require('express');
 
 const routes = express.Router();
 
-routes.get('/', (request, response) => {
-    // return response.send('Pow man!!!');
-    return response.json({
-        evento: 'Semana Metal'
-    });
-});
+const OngController = require('./controllers/OngController');
+
+routes.get('/ongs', );
+
+routes.get('/ongs', OngController.index);
+routes.post('/ongs', OngController.create);
 
 module.exports = routes;
